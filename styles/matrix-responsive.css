@@ -1,0 +1,22 @@
+/* matrix-responsive.css */
+.matrix-responsive {
+  font-size: 0.75rem; /* text-xs */
+}
+
+@media (min-width: 640px) {
+  .matrix-responsive {
+    font-size: 0.875rem; /* text-sm */
+  }
+}
+
+@media (min-width: 768px) {
+  .matrix-responsive {
+    font-size: 1rem; /* text-base */
+  }
+}
+
+@media (min-width: 1024px) {
+  .matrix-responsive {
+    font-size: 1.125rem; /* text-lg */
+  }
+}

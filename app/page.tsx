@@ -1,52 +1,49 @@
+"use client";
 import { Link } from "@heroui/link";
 import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
-
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { LandingCard } from "@/components/landing-card";
+import { MatrixRain } from "@/components/matrix-rain";
+import { useTheme } from "next-themes"; // If using next-themes
 
 export default function Home() {
-  return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Hi, I'm&nbsp;</span>
-        <br className="block md:hidden" />
-        <span className={title({ color: "violet" })}>Varnit Singh!&nbsp;</span>
-        <br />
-        <div className={subtitle({ class: "mt-4" })}>
-          An OS developer learning AI
-        </div>
-      </div>
-      
-      {/*<div className="flex gap-3">
-        <Link
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "flat",
-          })}
-          href={siteConfig.navItems.find(item => item.label === "Projects")?.href || "/projects"}
-        >
-          View Projects
-        </Link>
-        <Link
-          className={buttonStyles({ variant: "flat", radius: "full" })}
-          href={siteConfig.navItems.find(item => item.label === "Blog")?.href || "/blog"}
-        >
-          <GithubIcon size={20} />
-          Blog
-        </Link>
-      </div> */}
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
-      </div>
-    </section>
+  // Your Matrix rain configuration
+  const matrixConfig = {
+    density: {
+      activeColumns: 20,    // Adjust based on your preference
+      trailLength: 12,      // How many characters follow the lead
+      columnSpacing: 28     // Space between columns
+    },
+    speed: 110,            // Speed of character printing (ms)
+    colors: {
+      light: {
+        primary: '#059669',   // Emerald-600 for HeroUI theme compatibility
+        secondary: '#047857', // Emerald-700
+        background: '#ffffff' // White background
+      },
+      dark: {
+        primary: '#00ff41',   // Classic Matrix green
+        secondary: '#008f11', // Darker Matrix green
+        background: '#000000' // Black background
+      }
+    }
+  };
+
+  return (
+    <>
+      {/* Matrix Rain Background */}
+      <MatrixRain config={matrixConfig} isDark={isDark} />
+      
+      {/* Your existing content - now with relative positioning and higher z-index */}
+      <section className="relative z-10 h-screen flex flex-col items-center justify-top gap-4 py-8 md:py-10">
+        <LandingCard />
+      </section>
+    </>
   );
 }
