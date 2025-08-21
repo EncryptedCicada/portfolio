@@ -1,5 +1,4 @@
 "use client";
-
 import { Link } from "@heroui/link";
 import { Button } from "@heroui/button";
 import {
@@ -10,6 +9,7 @@ import {
   ModalFooter,   
   useDisclosure
 } from "@heroui/modal";
+import {Divider} from "@heroui/react";
 import {Code} from "@heroui/react";
 import { LinkedinIcon, ModalIcon, SadIcon } from "@/components/icons";
 import { ContactForm, ContactFormData } from "@/components/contact-form";
@@ -41,7 +41,7 @@ export function Footer() {
       >
         Contact Me
       </Button>
-      <div className="h-6 w-px bg-default-200" />
+      <Divider orientation="vertical" />
       <Link 
         isExternal 
         href={siteConfig.links.linkedin}
