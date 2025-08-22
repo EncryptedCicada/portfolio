@@ -1,6 +1,5 @@
 "use client";
-import { Card, CardHeader, CardBody, CardFooter, Image } from "@heroui/react";
-import { title, subtitle } from "@/components/primitives";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/react";
 
 
 export function LandingCard() {
@@ -9,25 +8,20 @@ export function LandingCard() {
       <Card
         isBlurred
         className="border-none bg-background/60 dark:bg-default-100/50 max-w-xl"
-        shadow="md"
+        shadow="sm"
       >
         <CardHeader className="inline-block text-center justify-center pb-0 pt-2 px-4 flex-col items-start">
-          <div className="inline-block max-w-xl text-center justify-center gap-2">
-            <span className={title()}>Hi, I'm&nbsp;</span>
-            <br className="block md:hidden" />
-            <span className={title({ color: "violet" })}>Varnit Singh!&nbsp;</span>
-            <br />
-          </div>
+          
         </CardHeader>
         <CardBody>
-          <div className="flex flex-col gap-6 md:gap-4 items-center justify-center">
-            <div className="relative col-span-6 md:col-span-4">
-                <div className={subtitle({ class: "mt-4" })}>
-                  An OS developer learning AI
-                </div>
-            </div>
+          <div className="flex flex-col items-center">
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab accusamus ullam maiores ex cupiditate, inventore repellat velit beatae impedit quos illum ad doloremque nisi similique! Autem, hic similique? Dolor, doloribus.
+            </p>
           </div>
         </CardBody>
+        <CardFooter className="flex justify-center pt-4">
+        </CardFooter>
       </Card>
     </div>
   );

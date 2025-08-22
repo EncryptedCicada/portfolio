@@ -1,26 +1,11 @@
 import "@/styles/globals.css";
-import "@/styles/matrix-responsive.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@heroui/link";
 import clsx from "clsx";
-import {
-  Modal, 
-  ModalContent, 
-  ModalHeader, 
-  ModalBody,
-  ModalFooter,
-  useDisclosure
-} from "@heroui/modal";
-import { Button } from "@heroui/button";
-import { HeartFilledIcon } from "@/components/icons";
 
 import { Providers } from "./providers";
-
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import { ContactForm } from "@/components/contact-form";
-import { LinkedinIcon } from "@/components/icons";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -55,7 +40,7 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
