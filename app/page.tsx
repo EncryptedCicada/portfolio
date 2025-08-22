@@ -1,5 +1,4 @@
 import { title, subtitle } from "@/components/primitives";
-import { LandingCard } from "@/components/landing-card";
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
       </section>
 
       <section className="bg-background relative h-screen z-40 flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <LandingCard />
       </section>
     </>
   );
