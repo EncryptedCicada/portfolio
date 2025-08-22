@@ -1,8 +1,3 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { LandingCard } from "@/components/landing-card";
 
@@ -27,8 +22,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Second Section overlays the fade */}
-      <section className="bg-background relative z-40 h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <section className="bg-background relative h-screen z-40 flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <LandingCard />
       </section>
     </>
