@@ -29,7 +29,17 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <HeroUINavbar maxWidth="2xl" position="sticky" isBordered>
+    <HeroUINavbar 
+      maxWidth="2xl" 
+      position="static" 
+      isBordered={false}
+      shouldHideOnScroll={false}
+      isBlurred={true}
+      classNames={{
+        base: "fixed top-0 z-50 bg-background/80 backdrop-blur-md",
+        wrapper: "w-full justify-center",
+      }}
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">

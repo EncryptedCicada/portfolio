@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <section
-        className="relative z-10 h-screen flex flex-col items-center justify-start pt-32 md:pt-40 gap-4 py-8 md:py-10 overflow-hidden"
+        className="relative z-10 h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10 overflow-hidden"
       >
         <div className="inline-block text-center justify-center gap-2 relative z-20">
           <span className={title()}>Hi, I'm&nbsp;</span>
