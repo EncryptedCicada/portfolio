@@ -1,6 +1,7 @@
 import { title, subtitle } from "@/components/primitives";
 import { ScrollDown } from "@/components/icons";
 import Link from "next/link";
+import Typewriter from "@/components/Typewriter";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         <div className="flex flex-col gap-6 md:gap-4 items-center justify-center relative z-20">
           <div className="relative col-span-6 md:col-span-4">
             <div className={subtitle({ class: "mt-4" })}>
-              An OS developer learning AI
+              <Typewriter text="An OS developer learning AI" speed={60} startDelay={1000} />
             </div>
           </div>
         </div>
