@@ -2,6 +2,25 @@ import * as React from "react";
 
 import { IconSvgProps } from "@/types";
 
+export const ScrollDown: React.FC<IconSvgProps> = ({
+  size = 32,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    height={size || height}
+    viewBox="0 0 32 32"
+    width={size || width}
+    {...props}
+  >
+    <path
+      d="M2.518 7.795c-.326-.004-.757.134-1.26.638C.099 9.591.87 10.363.87 10.363l12.813 12.813c2.313 2.313 4.627.005 4.632 0L31.13 10.363s.772-.772-.387-1.93c-.503-.504-.934-.642-1.26-.638a1.015 1.015 0 0 0-.669.251L16 20.86 3.187 8.046a1.016 1.016 0 0 0-.67-.251z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
 export const Logo: React.FC<IconSvgProps> = ({
   size = 48,
   width,
@@ -9,7 +28,6 @@ export const Logo: React.FC<IconSvgProps> = ({
   ...props
 }) => (
   <svg
-    fill="none"
     height={size || height}
     viewBox="0 0 32 32"
     width={size || width}

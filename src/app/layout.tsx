@@ -4,9 +4,10 @@ import clsx from "clsx";
 
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontSans, fontMono } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { BackgroundBlooms } from "@/components/background-blooms";
 
 export const metadata: Metadata = {
   title: {
@@ -38,10 +39,12 @@ export default function RootLayout({
         className={clsx(
           "min-h-screen text-foreground bg-background font-sans antialiased",
           fontSans.variable,
+          fontMono.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col min-h-screen">
+          <BackgroundBlooms />
+          <div className="relative flex flex-col min-h-screen z-10">
             <Navbar />
             <main className="container mx-auto max-w-7xl pt-20 px-6 flex-grow">
               {children}

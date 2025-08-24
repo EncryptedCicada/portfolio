@@ -9,10 +9,7 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
-import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -21,7 +18,6 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import {
   TwitterIcon,
   GithubIcon,
-  SearchIcon,
   Logo,
 } from "@/components/icons";
 
@@ -32,11 +28,11 @@ export const Navbar = () => {
     <HeroUINavbar 
       maxWidth="2xl" 
       position="static" 
-      isBordered={false}
+      isBordered={true}
       shouldHideOnScroll={false}
       isBlurred={true}
       classNames={{
-        base: "fixed top-0 z-50 bg-background/80 backdrop-blur-md",
+        base: "fixed top-0 z-50 bg-background/50 backdrop-blur-md",
         wrapper: "w-full justify-center",
       }}
     >
