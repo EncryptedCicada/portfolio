@@ -15,7 +15,7 @@ export const BackgroundBlooms = () => {
       
       <div 
         aria-hidden="true"
-        className="fixed opacity-70 dark:opacity-60 -bottom-[30%] -left-[70%] sm:-bottom-[60%] sm:-left-[90%] md:-bottom-[100%] md:-left-[90%] lg:-bottom-[130%] lg:-left-[80%] z-0 pointer-events-none"
+        className="fixed opacity-70 dark:opacity-50 -bottom-[30%] -left-[70%] sm:-bottom-[60%] sm:-left-[90%] md:-bottom-[100%] md:-left-[90%] lg:-bottom-[130%] lg:-left-[30%] z-0 pointer-events-none"
       >
         <img 
           src="/bloom_bottom.svg" 
