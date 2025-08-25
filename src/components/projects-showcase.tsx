@@ -33,7 +33,7 @@ const projects = [
 
 export default function ProjectsShowcase() {
   return (
-    <div className="hidden lg:flex flex-col justify-center h-full">
+    <div className="hidden lg:flex flex-col justify-center w-full h-full">
       <div className="flex flex-wrap justify-center gap-6">
         {projects.map((project) => (
           <Card

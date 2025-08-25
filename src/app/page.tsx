@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="flex flex-row flex-wrap align-center justify-center mb-6 gap-6">
           <Button variant="solid" color="primary" className="flex lg:hidden items-center">
-            View Profile
+            View Projects
           </Button>
           <Button startContent={<ModalIcon />} variant="bordered" color="primary" className="hidden min-sm:flex md:hidden items-center">
             Blog
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
 
         {/* Scroll down indicator */}
-        <div className="absolute bottom-[10%] hidden lg:flex w-full justify-center items-center">
+        <div className="absolute bottom-[10%] hidden sm:flex w-full justify-center items-center">
           <div className="animate-bounce">
             <Link 
               href="#section2"

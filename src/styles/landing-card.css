@@ -1,0 +1,16 @@
+.landing-card[data-hover="true"] .card-image {
+  transform: scale(1.1);
+  filter: saturate(1) brightness(1.1);
+}
+
+.landing-card[data-hover="true"] .card-footer {
+  opacity: 0;
+}
+
+.card-image {
+  transition: transform 0.7s ease-out, filter 0.7s ease-out;
+}
+
+.card-footer {
+  transition: opacity 0.5s ease-out;
+}
