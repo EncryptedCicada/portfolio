@@ -36,19 +36,12 @@ export function Footer() {
       <Button
         onPress={onOpen}
         startContent={<ModalIcon />}
+        color="secondary"
         variant="flat"
         className="text-sm font-normal"
       >
         Contact Me
       </Button>
-      <Divider orientation="vertical" />
-      <Link 
-        isExternal 
-        href={siteConfig.links.linkedin}
-        className="text-default-500 hover:text-default-900"
-      >
-        <LinkedinIcon className="text-default-500" />
-      </Link>
 
       <Modal 
         isOpen={isOpen} 

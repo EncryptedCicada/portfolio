@@ -18,10 +18,6 @@ export const siteConfig = {
       label: "Blog",
       href: "/blog",
     },
-    {
-      label: "About",
-      href: "/about",
-    },
   ],
   links: {
     github: "https://github.com/EncryptedCicada",

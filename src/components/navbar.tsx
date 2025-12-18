@@ -1,13 +1,13 @@
 "use client";
 import { usePathname } from "next/navigation";
 import {
-  Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
+  Navbar,
   NavbarBrand,
+  NavbarContent,
   NavbarItem,
-  NavbarMenuItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem
 } from "@heroui/navbar";
 import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
@@ -16,16 +16,17 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  TwitterIcon,
+  LinkedinIcon,
   GithubIcon,
   Logo,
 } from "@/components/icons";
+import { Divider } from "@heroui/react";
 
-export const Navbar = () => {
+export const HeroUINavbar = () => {
   const pathname = usePathname();
 
   return (
-    <HeroUINavbar 
+    <Navbar 
       maxWidth="2xl" 
       position="static" 
       isBordered={true}
@@ -65,8 +66,8 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
+          <Link isExternal aria-label="LinkedIn" href={siteConfig.links.linkedin}>
+            <LinkedinIcon className="text-default-500" />
           </Link>
           <Link isExternal aria-label="Github" href={siteConfig.links.github}>
             <GithubIcon className="text-default-500" />
@@ -77,12 +78,13 @@ export const Navbar = () => {
 
       <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
+          <Link isExternal aria-label="LinkedIn" href={siteConfig.links.linkedin}>
+            <LinkedinIcon className="text-default-500" />
           </Link>
           <Link isExternal aria-label="Github" href={siteConfig.links.github}>
             <GithubIcon className="text-default-500" />
           </Link>
+        <Divider orientation="vertical" />
         </NavbarItem>
         <ThemeSwitch />
         <NavbarMenuToggle />
@@ -108,6 +110,6 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu>
-    </HeroUINavbar>
+    </Navbar>
   );
 };
