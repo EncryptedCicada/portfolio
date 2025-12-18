@@ -84,7 +84,6 @@ export const HeroUINavbar = () => {
           <Link isExternal aria-label="Github" href={siteConfig.links.github}>
             <GithubIcon className="text-default-500" />
           </Link>
-        <Divider orientation="vertical" />
         </NavbarItem>
         <ThemeSwitch />
         <NavbarMenuToggle />
