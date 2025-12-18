@@ -37,7 +37,7 @@ export function Footer() {
         onPress={onOpen}
         startContent={<ModalIcon />}
         variant="flat"
-        className="text-sm font-normal text-default-600 bg-default-100"
+        className="text-sm font-normal"
       >
         Contact Me
       </Button>
