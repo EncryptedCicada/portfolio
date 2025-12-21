@@ -6,7 +6,7 @@ THE BRAND LOGO USED IN THIS WEBSITE IS MY INTELLECTUAL PROPERTY AND THE USER IS 
 
 ## Technologies Used
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
+- [Next.js](https://nextjs.org/docs/getting-started)
 - [HeroUI v2](https://heroui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tailwind Variants](https://tailwind-variants.org)
