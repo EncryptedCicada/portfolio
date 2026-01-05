@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import "@/styles/landing-card.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
