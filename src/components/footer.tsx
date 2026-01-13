@@ -2,23 +2,25 @@
 import { Link } from "@heroui/link";
 import { Button } from "@heroui/button";
 import {
-  Modal, 
-  ModalContent, 
-  ModalHeader, 
+  Modal,
+  ModalContent,
+  ModalHeader,
   ModalBody,
-  ModalFooter,   
+  ModalFooter,
   useDisclosure
 } from "@heroui/modal";
-import {Divider} from "@heroui/react";
-import {Code} from "@heroui/react";
+import { Divider } from "@heroui/react";
+import { Code } from "@heroui/react";
 import { LinkedinIcon, ModalIcon, SadIcon } from "@/components/icons";
 import { ContactForm, ContactFormData } from "@/components/contact-form";
 import { siteConfig } from "@/config/site";
 import { useRef } from "react";
+import { useTheme } from "next-themes";
 
 export function Footer() {
-  const {isOpen, onOpen, onClose} = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const formRef = useRef<ContactFormData>({ email: "", message: "" });
+  const { theme } = useTheme();
 
   const handleSubmit = () => {
     if (formRef.current.email && formRef.current.message) {
@@ -36,15 +38,15 @@ export function Footer() {
       <Button
         onPress={onOpen}
         startContent={<ModalIcon />}
-        color="secondary"
+        color={theme === 'dark' ? 'warning' : 'secondary'}
         variant="flat"
-        className="text-sm font-normal"
+        className="text-sm font-normal "
       >
         Contact Me
       </Button>
 
-      <Modal 
-        isOpen={isOpen} 
+      <Modal
+        isOpen={isOpen}
         onClose={onClose}
         size="md"
         backdrop="blur"
@@ -58,9 +60,9 @@ export function Footer() {
             <Button color="danger" variant="light" onPress={onClose}>
               Close
             </Button>
-            <Button 
-              color="primary" 
-              variant="flat" 
+            <Button
+              color="primary"
+              variant="flat"
               onPress={handleSubmit}
               isDisabled={!formRef.current?.email || !formRef.current?.message}
             >
