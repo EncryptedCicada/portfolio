@@ -1,6 +1,6 @@
 # Portfolio
 
-This is my personal portfolio which showcases my work, skills, projects and houses my blogs.
+This is my personal portfolio which showcases my work, skills, projects and resume.
 
 THE BRAND LOGO USED IN THIS WEBSITE IS MY INTELLECTUAL PROPERTY AND THE USER IS REQUESTED NOT TO USE THAT IN THEIR PRODUCT.
 

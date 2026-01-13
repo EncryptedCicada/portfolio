@@ -3,11 +3,11 @@ import { link } from "fs";
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Varnit Singh - Portfolio",
+  name: "Varnit Singh | EncryptedCicada : Portfolio",
   description: "Varnit Singh's personal portfolio showcasing projects, skills, and contact information.",
   navItems: [
     {
-      label: "Home",
+      label: "About",
       href: "/",
     },
     {
@@ -15,8 +15,8 @@ export const siteConfig = {
       href: "/projects",
     },
     {
-      label: "Blog",
-      href: "/blog",
+      label: "Resume",
+      href: "/resume",
     },
   ],
   links: {

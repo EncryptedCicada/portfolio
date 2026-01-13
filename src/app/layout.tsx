@@ -46,7 +46,7 @@ export default function RootLayout({
           <BackgroundBlooms />
           <div className="relative flex flex-col min-h-screen z-10">
             <HeroUINavbar />
-            <main className="container mx-auto max-w-7xl pt-20 px-6 flex-grow">
+            <main className="container mx-auto max-w-7xl pt-0 px-6 grow">
               {children}
             </main>
             <Footer />

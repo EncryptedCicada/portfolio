@@ -23,7 +23,7 @@ const ThemeSwitch = () => {
       defaultSelected={theme === 'dark'}
       color="primary"
       size="md"
-      thumbIcon={({isSelected, className}) =>
+      thumbIcon={({ isSelected, className }) =>
         isSelected ? <SunIcon className={className} /> : <MoonIcon className={className} />
       }
       onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}

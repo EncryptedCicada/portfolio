@@ -1,58 +1,66 @@
-import { ScrollDown } from "@/components/icons";
-import Link from "next/link";
 import { title } from "@/components/primitives";
-import LandingCard from "@/components/landing-card";
-import ProjectsShowcase from "@/components/projects-showcase";
-import { Button } from "@heroui/button";
-import { ModalIcon } from "@/components/icons";
-import { Divider } from "@heroui/divider";
+import Highlights from "@/components/highlights";
+import Typewriter from "@/components/Typewriter";
+import { SkillsAndTechnologies } from "@/components/skills";
+import { ScrollDown } from "@/components/icons"
+// import { Toc } from "@/components/toc";
 
-export default function Home() {
+const description = "I'm a developer passionate about low(er) level programming, have worked on linux kernel development \
+and through my hobby of hands-on experimentation, I'm currently exploring embedded systems and \
+firmware development.";
+
+// const headings = [
+//   { level: 2, text: "About", id: "section1" },
+//   { level: 2, text: "Showcase", id: "section2" },
+// ];
+
+export default function About() {
   return (
-    <>
-      <section className="relative z-10 min-h-screen flex flex-col items-center justify-start px-4 sm:py-10 md:py-15 lg:py-20 overflow-hidden">
-        <div className="inline-block text-center justify-top md:gap-2 relative z-20 lg:pb-10">
-          <span className={title()}>Hi, I'm&nbsp;</span>
-          <br className="block md:hidden" />
-          <span className={title({ color: "violet" })}>Varnit Singh!&nbsp;</span>
-          <br />
-        </div>
+    <div className="flex gap-8">
+      <div className="flex-1 flex flex-col items-center justify-start">
+        <section
+          id="section1"
+          data-toc="About"
+          className="relative w-full min-h-dvh pt-20 flex flex-col items-center justify-start overflow-hidden"
+        >
+          <div className="w-full flex flex-col items-center px-4 sm:py-10 md:py-15 lg:py-20">
+            <div className="inline-block text-center justify-top md:gap-2 relative lg:pb-10">
+              <span className={title({ size: "lg" })}>Hi, I'm&nbsp;</span>
+              <br className="block md:hidden" />
+              <span className={title({ size: "lg", color: "violet" })}>Varnit!&nbsp;</span>
+              <br />
+            </div>
 
-        <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center w-full py-10 gap-4 lg:gap-20">
-          <LandingCard />
-          <Divider 
-            orientation="vertical" 
-            className="hidden lg:block absolute left-1/2 h-[75%] -translate-x-1/2" 
-          />
-          <div className="hidden lg:flex">
-            <ProjectsShowcase />
+            <div className="relative flex items-center text-center justify-items-center max-w-7xl py-10 gap-4 lg:gap-20 text-2xl">
+              <Typewriter text={description} speed={25} startDelay={500} />
+            </div>
+
+            <div className="relative flex items-center text-center justify-items-center max-w-7xl py-20 gap-4 lg:gap-20">
+              <h1 className={title({ size: "sm", color: "blue" })}>Skills & Technologies</h1>
+            </div>
+            <SkillsAndTechnologies />
           </div>
-        </div>
-        <div className="flex flex-row flex-wrap align-center justify-center mb-6 gap-6">
-          <Button variant="solid" color="primary" className="flex lg:hidden items-center">
-            View Projects
-          </Button>
-          <Button startContent={<ModalIcon />} variant="bordered" color="primary" className="hidden min-sm:flex md:hidden items-center">
-            Blog
-          </Button>
-        </div>
 
-        {/* Scroll down indicator */}
-        <div className="absolute bottom-[10%] hidden sm:flex w-full justify-center items-center">
-          <div className="animate-bounce">
-            <Link 
-              href="#section2"
-              className="text-default-500 hover:text-default-900 transition-colors"
-            >
-              <ScrollDown />
-            </Link>
+          <div className="absolute bottom-20 animate-bounce hidden md:block">
+            <ScrollDown className="w-8 h-8 text-default-500" />
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="section2" className="relative z-10 h-screen flex flex-col items-center justify-center">
-        {/* Content for second section */}
-      </section>
-    </>
+        <section
+          id="section2"
+          data-toc="Showcase"
+          className="relative w-full min-h- flex flex-col items-center justify-top px-4 pb-50"
+        >
+          <div className="relative items-center text-center justify-items-center max-w-7xl pb-10 gap-4 lg:gap-16">
+            <h1 className={title({ size: "sm", color: "blue" })}>Highlights</h1>
+          </div>
+          <Highlights />
+        </section>
+      </div>
+
+      {/* <div className="hidden xl:block">
+        <Toc headings={headings} />
+      </div> */}
+    </div>
   );
 }
