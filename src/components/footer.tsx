@@ -15,12 +15,10 @@ import { LinkedinIcon, ModalIcon, SadIcon } from "@/components/icons";
 import { ContactForm, ContactFormData } from "@/components/contact-form";
 import { siteConfig } from "@/config/site";
 import { useRef } from "react";
-import { useTheme } from "next-themes";
 
 export function Footer() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const formRef = useRef<ContactFormData>({ email: "", message: "" });
-  const { theme } = useTheme();
 
   const handleSubmit = () => {
     if (formRef.current.email && formRef.current.message) {
@@ -38,7 +36,7 @@ export function Footer() {
       <Button
         onPress={onOpen}
         startContent={<ModalIcon />}
-        color={theme === 'dark' ? 'warning' : 'secondary'}
+        color="secondary"
         variant="flat"
         className="text-sm font-normal "
       >
