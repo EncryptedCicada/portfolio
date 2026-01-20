@@ -13,8 +13,8 @@ export default function Resume() {
       <Tabs aria-label="ResumeHeadings" isVertical={false} radius="lg"
         classNames={{
           tabList: "bg-default-200/40 dark:bg-default-200/40",
-          cursor: "bg-secondary/20 dark:bg-success/20",
-          tabContent: "p-1 text-foreground group-data-[selected=true]:text-secondary dark:group-data-[selected=true]:text-success group-data-[hover=true]:text-secondary dark:group-data-[hover=true]:text-success",
+          cursor: "bg-secondary/20 dark:bg-warning/20",
+          tabContent: "p-1 text-foreground group-data-[selected=true]:text-secondary dark:group-data-[selected=true]:text-warning group-data-[hover=true]:text-secondary dark:group-data-[hover=true]:text-warning",
         }}
         className="flex align-center justify-center">
         <Tab key="summary" title="Summary" className="flex justify-center w-full">
@@ -32,7 +32,7 @@ export default function Resume() {
                 <Divider className="mt-2 mb-2" />
                 <span className="flex justify-between italic p-2">
                   <div>Master of Computer Science</div>
-                  <div className="text-warning pl-2 flex-none">~ Dec 2026</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">~ Dec 2026</div>
                 </span>
               </div>
               <br className="gap-10" />
@@ -41,7 +41,7 @@ export default function Resume() {
                 <Divider className="mt-2 mb-2" />
                 <span className="flex justify-between italic p-2">
                   <div>Bachelor of Technology in Information Technology</div>
-                  <div className="text-warning pl-2 flex-none">2020 - 2024</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">2020 - 2024</div>
                 </span>
               </div>
             </CardBody>
@@ -51,7 +51,7 @@ export default function Resume() {
           <Card className="bg-default-100/40 dark:bg-default-100/40 w-full max-w-7xl">
             <CardBody className="p-5">
               <div className="flex flex-col">
-                <p className="text-lg font-bold ">
+                <span className="text-lg font-bold ">
                   Android Open Source Platform Bringup
                   <div className="inline-block pl-2">
                     <Tooltip closeDelay={2000} color="secondary" placement="top" content="Latest work on HTC IML (U12 Life) in 2025">
@@ -66,16 +66,16 @@ export default function Resume() {
                       </Button>
                     </Tooltip>
                   </div>
-                </p>
+                </span>
                 <Divider className="mt-2 mb-2" />
                 <span className="flex justify-between italic p-2">
-                  <div>Bringing up AOSP on manufacturer abandoned devices to breathe new life into them \\ Devices: Motorola Berlin, Lenovo sisley2OFRL, Lenovo k5fpr, HTC IML</div>
-                  <div className="text-warning pl-2 flex-none">Ongoing (Hobby)</div>
+                  <div>Bringing up AOSP on manufacturer abandoned devices to breathe new life into them \\ Devices worked on: Motorola Berlin, Lenovo sisley2OFRL, Lenovo k5fpr, HTC IML</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">Ongoing (Hobby)</div>
                 </span>
               </div>
               <br className="gap-10" />
               <div className="flex flex-col">
-                <p className="text-lg font-bold ">
+                <span className="text-lg font-bold ">
                   Android Kernel Development from Scratch & Display Driver Integration
                   <div className="inline-block pl-2">
                     <Tooltip closeDelay={2000} color="secondary" placement="top" content="Latest work on HTC IML (U12 Life) in 2025">
@@ -90,11 +90,11 @@ export default function Resume() {
                       </Button>
                     </Tooltip>
                   </div>
-                </p>
+                </span>
                 <Divider className="mt-2 mb-2" />
                 <span className="flex justify-between italic p-2">
                   <div>Creating an android linux kernel using mainline Qualcomm CAF sources and integrating device trees and drivers to boot on the HTC IML aka HTC U12 Life</div>
-                  <div className="text-warning pl-2 flex-none">Ongoing (Hobby)</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">2025</div>
                 </span>
               </div>
               <br className="gap-10" />
@@ -103,12 +103,12 @@ export default function Resume() {
                 <Divider className="mt-2 mb-2" />
                 <span className="flex justify-between italic p-2">
                   <div>Preliminary study and proof of concept prototype to demonstate predicting on-ground methane concentration using satellite based data of atmospheric columns concluded in a thesis generalised to any type of greenhouse gas</div>
-                  <div className="text-warning pl-2 flex-none">2023</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">2023</div>
                 </span>
               </div>
               <br className="gap-10" />
               <div className="flex flex-col">
-                <p className="text-lg font-bold ">
+                <span className="text-lg font-bold ">
                   Job Application Fullstack WebApp: JobShala
                   <div className="inline-block pl-2">
                     <Button
@@ -121,16 +121,16 @@ export default function Resume() {
                       <GithubIcon />
                     </Button>
                   </div>
-                </p>
+                </span>
                 <Divider className="mt-2 mb-2" />
                 <span className="flex justify-between italic p-2">
                   <div>Collaborated on a fullstack web application to serve as an all encompassing job/internship application portal</div>
-                  <div className="text-warning pl-2 flex-none">2024</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">2024</div>
                 </span>
               </div>
               <br className="gap-10" />
               <div className="flex flex-col">
-                <p className="text-lg font-bold ">
+                <span className="text-lg font-bold ">
                   Arch Linux Install Guide for Beginners to Advanced Users
                   <div className="inline-block pl-2">
                     <Button
@@ -143,16 +143,16 @@ export default function Resume() {
                       <GithubIcon />
                     </Button>
                   </div>
-                </p>
+                </span>
                 <Divider className="mt-2 mb-2" />
                 <span className="flex justify-between italic p-2">
                   <div>Repo for installing and configuring Arch Linux with a personal and beginner friendly touch</div>
-                  <div className="text-warning pl-2 flex-none">2023</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">2023</div>
                 </span>
               </div>
               <br className="gap-10" />
               <div className="flex flex-col">
-                <p className="text-lg font-bold ">
+                <span className="text-lg font-bold ">
                   Using Image Processing to Solve Jigsaw Puzzles
                   <div className="inline-block pl-2">
                     <Button
@@ -165,11 +165,33 @@ export default function Resume() {
                       <GithubIcon />
                     </Button>
                   </div>
-                </p>
+                </span>
                 <Divider className="mt-2 mb-2" />
                 <span className="flex justify-between italic p-2">
                   <div>Using OpenCV and python to create and solve jigsaw puzzles for an arbitrary image by dividing it into 8 uniform parts</div>
-                  <div className="text-warning pl-2 flex-none">2023</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">2023</div>
+                </span>
+              </div>
+              <br className="gap-10" />
+              <div className="flex flex-col">
+                <span className="text-lg font-bold ">
+                  Personal Portfolio
+                  <div className="inline-block pl-2">
+                    <Button
+                      isIconOnly
+                      aria-label="portfolio-github-link"
+                      variant="flat"
+                      color="secondary"
+                      onPress={() => window.open("https://github.com/EncryptedCicada/Simple_Jigsaw_Solver", "_blank")}
+                    >
+                      <GithubIcon />
+                    </Button>
+                  </div>
+                </span>
+                <Divider className="mt-2 mb-2" />
+                <span className="flex justify-between italic p-2">
+                  <div>Using OpenCV and python to create and solve jigsaw puzzles for an arbitrary image by dividing it into 8 uniform parts</div>
+                  <div className="text-primary dark:text-warning pl-2 flex-none">2023</div>
                 </span>
               </div>
             </CardBody>
